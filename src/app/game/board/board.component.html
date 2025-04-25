@@ -1,0 +1,5 @@
+<div class="board">
+  @for (square of squares(); track $index) {
+  <app-square [index]="$index" [value]="square" />
+  }
+</div>

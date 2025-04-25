@@ -1,1 +1,78 @@
 /* You can add global styles to this file, and also import other style files */
+@import "open-props/style";
+@import "open-props/normalize";
+@import "open-props/buttons";
+@import "open-props/colors-hsl";
+
+:root {
+  --border-color: var(--gray-5);
+  --x-color: var(--red-10);
+  --o-color: var(--blue-5);
+  --square-size: var(--size-12);
+}
+
+app-root {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  height: var(--size-9);
+  border-bottom: var(--border-size-1) solid var(--border-color);
+  display: flex;
+  gap: var(--size-6);
+  align-items: center;
+  padding: 0 var(--size-4);
+}
+
+header .separator {
+  height: 75%;
+  border-right: var(--border-size-1) solid var(--border-color);
+}
+
+main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.game {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, var(--square-size));
+}
+
+.square {
+  width: var(--square-size);
+  height: var(--square-size);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: var(--border-size-1) solid var(--border-color);
+  border-radius: 0;
+  outline: 0;
+  background-color: inherit;
+  box-shadow: none;
+  font-size: var(--font-size-4);
+}
+
+.status {
+  font-size: var(--font-size-8);
+}
+
+.fading {
+  border: var(--border-size-1) solid var(--border-color);
+  padding: var(--size-3);
+  border-radius: var(--radius-3);
+}
